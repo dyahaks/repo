@@ -1,0 +1,19 @@
+<ons-page id="hello">
+    <ons-toolbar id="toolbar" modifier="transparent">
+        <div class="left"><ons-back-button style="color:white;">Back</ons-back-button></div>
+    </ons-toolbar>
+    <div>
+        <div style="height: 90%;">
+            <div style="color:white;padding:10% 10% 5% 10%;"><span style="font-size:35pt">Hello!</span></div>
+            <div style="color:white;padding:0 10% 0 10%"><span style="font-size:27pt">Use your fingerprint<br/>to login.</span></div>
+            <div align="center" style="padding:10% 0 0 0; vertical-align: middle;"><img src="assets/icon/fingerprint.png" width="110" /></div>
+        </div>
+        <div style="height: 15%; margin: 10% 10% 5% 10%;">
+            <ons-button class="btn-pin-login" style="text-align:center" ng-click="myNav.replacePage('enterPin.html');">PIN LOGIN</ons-button>
+        </div>
+    </div>
+    
+    <!--<ons-bottom-toolbar style="margin: 10%;">
+        <ons-button class="btn-pin-login" style="text-align:center" ng-click="myNav.pushPage('enterPin.html');">PIN LOGIN</ons-button>
+    </ons-bottom-toolbar>    -->
+</ons-page>

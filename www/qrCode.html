@@ -1,0 +1,29 @@
+<ons-page id="qrCode" ng-controller="qrCodeCtrl">
+    <ons-toolbar>
+        <div class="left">
+            <ons-back-button></ons-back-button>
+        </div>
+        <div class="center" style="text-align:center;">
+            <span style="font-size:14pt;font-weight:bold;">My QR Code</span>
+        </div>
+        <div class="right" style="padding-top:2%">
+            <ons-toolbar-button ng-click="myNav.pushPage('notifications.html')">
+                <img src="assets/icon/bells.png" width="25px" height="25px"/>
+                <span class="notification" style="font-size: 8pt;margin-left:-25%">1</span>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    <div style="background-color: white; margin: 10% 10% 10% 10%; width: 80%; text-align: center;">
+        <div class="padding center">
+            <h2 style="color: #083075;">John Doe</h2>
+        </div>
+        <div class="center" style="margin: 0 10% 10% 10%; align: center;">
+            <div id="qrcode" align="center" style="text-align: center;"></div>
+            <!--<input id="text" type="text" value="12345"/><br />
+            <div id="qrcode" style="width: 30%; height: 30%;"></div>-->
+        </div>
+        <div class="padding center">
+            <span style="font-size: 10pt; font-weight: 300; color: #62819A;">Scan Qr Code to receive <br/> transfer</span><br/>
+        </div>
+    </div>
+</ons-page>

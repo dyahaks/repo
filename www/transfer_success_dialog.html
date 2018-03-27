@@ -1,0 +1,42 @@
+<ons-dialog var="dialog" cancelable width="80%" height="80%" mask-color="rgba(0, 0, 0, 0.2)" ng-controller="transferCtrl">
+    <div style="text-align: center; margin-bottom: -15%; background-color:#b3b3b3">
+        <img src="assets/icon/Sucess.png" alt="" width="60px" height="60px" />
+    </div>
+    <div class="successDialog" style="padding-top: 10%;">
+        <div class="padding center" style="margin: 5% 5% 0 5%; border-bottom: 2pt dashed #08275D;">
+            <h3>Successfully!</h3>
+            <span style="font-size: 10pt;color: #62819A;">Well that was reall easy</span>
+        </div>
+        <div style="padding-top: 5%">
+            <ons-row class="padding">
+                <ons-col>
+                    <div style="color: #62819A;;">DATE</div>
+                    <div style="font-size: 10pt;">Oktober 11, 2017</div>
+                </ons-col>
+                <ons-col>
+                    <div style="text-align: right; color: #62819A;">TIME</div>
+                    <div style="text-align: right; font-size: 10pt;">03:00 PM</div>
+                </ons-col>
+            </ons-row>
+            <ons-row class="padding">
+                <ons-col>
+                    <div style="color: #62819A;;">TRANSFER TO</div>
+                    <div>087875231579</div>
+                </ons-col>
+            </ons-row>
+            <ons-row class="padding">
+                <ons-col>
+                    <div style="color: #62819A;;">AMOUNT</div>
+                    <div style="font-size: 15pt;">Rp 50.000</div>
+                </ons-col>
+                <ons-col>
+                    <div style="text-align: right; color: #62819A;">CASHBACK</div>
+                    <div style="text-align: right; font-size: 15pt;">0</div>
+                </ons-col>
+            </ons-row>
+        </div>
+        <div align="center" class="padding">
+            <ons-button style="background-color: #163e95; width:30%" ng-click="closeDialog()"> Ok </ons-button>
+        </div>
+    </div>
+</ons-dialog>

@@ -1,0 +1,38 @@
+<ons-page ng-init="data_search_flight()" ng-controller="travelingCtrl">
+    <ons-list style="background-color:transparent;">
+        <ons-list-header style="background-color:transparent;font-size:15pt">Departing Flight</ons-list-header>
+        <ons-list-item modifier="chevron" style="width:94%; border-radius:5px 5px 0 0; margin:0 3% 0 3%;" id="list-white" onClick="myNav.pushPage('flight_detail.html');" tappable>
+            <div class="left">
+                <img class="list-item__icon" width="40" src="assets/icon/states_airlines.png">
+            </div>
+            <div align="left">
+                    <span class="list-item__title">6:35 AM - 8:22 AM</span><br>
+                    <span class="list-item__subtitle">1 Transit &#8226; 1h 47m &#8226; <span ng-repeat="bandarafrom in bandara" ng-if="from == bandarafrom.kode">{{bandarafrom.kode}}</span> &#8226; <span ng-repeat="bandarato in bandara" ng-if="to == bandarato.kode">{{bandarato.kode}}</span></span><br>
+                    <span class="list-item__subtitle">States Airlines</span><br>
+                    <span class="list-item__subtitle"><span class="text-promo">Rp 6.000.000</span>/Pax</span>
+            </div>
+        </ons-list-item>
+        <ons-list-item modifier="chevron" style="width:94%;margin:0 3% 0 3%;" id="list-white" onClick="myNav.pushPage('flight_detail.html');" tappable>
+            <div class="left">
+                <img class="list-item__icon" width="40" src="assets/icon/skyview_airlines.png">
+            </div>
+            <div align="left">
+                    <span class="list-item__title">6:35 AM - 8:22 AM</span><br>
+                    <span class="list-item__subtitle">Direct &#8226; 1h 47m &#8226; <span ng-repeat="bandarafrom in bandara" ng-if="from == bandarafrom.kode">{{bandarafrom.kode}}</span> &#8226; <span ng-repeat="bandarato in bandara" ng-if="to == bandarato.kode">{{bandarato.kode}}</span></span><br>
+                    <span class="list-item__subtitle">Skyview Airlines</span><br>
+                    <span class="list-item__subtitle"><span class="text-promo">Rp 6.220.000</span>/Pax</span>
+            </div>
+        </ons-list-item>
+        <ons-list-item modifier="chevron" style="width:94%; border-radius:0 0 5px 5px; margin:0 3% 0 3%;" id="list-white" onClick="myNav.pushPage('flight_detail.html');" tappable>
+            <div class="left">
+                <img class="list-item__icon" width="40" src="assets/icon/fly_airlines.png">
+            </div>
+            <div align="left">
+                    <span class="list-item__title">6:35 AM - 8:22 AM</span><br>
+                    <span class="list-item__subtitle">Nonstop &#8226; 1h 47m &#8226; <span ng-repeat="bandarafrom in bandara" ng-if="from == bandarafrom.kode">{{bandarafrom.kode}}</span> &#8226; <span ng-repeat="bandarato in bandara" ng-if="to == bandarato.kode">{{bandarato.kode}}</span></span><br>
+                    <span class="list-item__subtitle">Fly Airlines</span><br>
+                    <span class="list-item__subtitle"><span class="text-promo">Rp 6.220.000</span>/Pax</span>
+            </div>
+        </ons-list-item>
+    </ons-list>
+</ons-page>

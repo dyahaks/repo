@@ -1,0 +1,63 @@
+<ons-page ng-controller="reenterPinCtrl" id="pinPage" ng-init="init();">
+    <ons-toolbar style="background: #083075;" fixed-style modifier="transparent">
+        <ons-back-button style="color: white;"> Back </ons-back-button>
+    </ons-toolbar>
+    <div id="pin">
+        <span style="font-size: 20pt; padding: 0;">Re-Enter your PIN number</span>
+        <div class="dotsR" id="bullet" style="margin-top: -3%; margin-bottom: 3%;">
+            <div class="dotR" id="rPin1"></div>
+            <div class="dotR" id="rPin2"></div>
+            <div class="dotR" id="rPin3"></div>
+            <div class="dotR" id="rPin4"></div>
+            <div class="dotR" id="rPin5"></div>
+            <div class="dotR" id="rPin6"></div>
+        </div>
+        <span class="center" style="font-size: 9pt; color: white; font-style:bold;" id="wrong"></span>
+        <div id="numbers">
+            <ons-row>
+                <ons-col>
+                    <div class="number" ng-click="add(1)"> 1 </div>
+                </ons-col>
+                <ons-col>
+                    <div class="number" ng-click="add(2)"> 2 </div>
+                </ons-col>
+                <ons-col>
+                    <div class="number" ng-click="add(3)"> 3 </div>
+                </ons-col>
+            </ons-row>
+            <ons-row>
+                <ons-col>
+                    <div class="number" ng-click="add(4)"> 4 </div>
+                </ons-col>
+                <ons-col>
+                    <div class="number" ng-click="add(5)"> 5 </div>
+                </ons-col>
+                <ons-col>
+                    <div class="number" ng-click="add(6)"> 6 </div>
+                </ons-col>
+            </ons-row>
+            <ons-row>
+                <ons-col>
+                    <div class="number" ng-click="add(7)"> 7 </div>
+                </ons-col>
+                <ons-col>
+                    <div class="number" ng-click="add(8)"> 8 </div>
+                </ons-col>
+                <ons-col>
+                    <div class="number" ng-click="add(9)"> 9 </div>
+                </ons-col>
+            </ons-row>
+            <ons-row>
+                <ons-col>
+                    <div >  </div>
+                </ons-col>
+                <ons-col>
+                    <div class="number" ng-click="add(0)"> 0 </div>
+                </ons-col>
+                <ons-col>
+                    <div >  </div>
+                </ons-col>
+            </ons-row>
+        </div>
+    </div>
+</ons-page>

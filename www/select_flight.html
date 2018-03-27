@@ -1,0 +1,81 @@
+<ons-page ng-controller="travelingCtrl" ng-init="data_search_flight()">
+    <ons-toolbar>
+        <div class="left">
+            <ons-back-button></ons-back-button>
+        </div>
+        <div class="center" style="text-align:center;">
+            <span style="font-size:14pt;font-weight:bold;">Select Flight</span>
+        </div>
+        <div class="right" style="padding-top:2%">
+            <ons-toolbar-button>
+                <img src="assets/icon/bells.png" width="25px" height="25px"/>
+                <span class="notification" style="font-size: 8pt;margin-left:-25%">1</span>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    <div class="topmenu" style="padding:3%;height:40%">
+        <ons-row vertical-align="center">
+            <ons-col style="text-align:center;">
+                <span style="font-size:20pt;color:white;" ng-repeat="bandara in bandara" ng-if="from == bandara.kode">{{bandara.kode}}</span>
+            </ons-col>
+            <ons-col style="text-align:center;">
+                <ons-row vertical-align="center">
+                    <div style="width: 30%;">
+                        <hr style="border: 0.5pt solid grey;" />
+                    </div>
+                    <div style="width: 30%; padding-left: 2%; padding-right: 2%;">
+                        <ons-icon icon="fa-plane" style="color:grey" size="30px"></ons-icon>
+                    </div>
+                    <div style="width: 30%;">
+                        <hr style="border: 0.5pt solid grey;" />
+                    </div>
+                </ons-row>
+            </ons-col>
+            <ons-col style="text-align:center;">
+                <span style="font-size:20pt;color:white;" ng-repeat="bandara2 in bandara" ng-if="to == bandara2.kode">{{bandara2.kode}}</span>
+            </ons-col>
+        </ons-row>
+        <ons-row vertical-align="center">
+            <ons-col style="text-align:center;">
+                <span style="color:white;font-size:10pt;" ng-repeat="bandara in bandara" ng-if="from == bandara.kode">{{bandara.kota}}, {{bandara.negara}}</span>
+            </ons-col>
+            <ons-col>
+            </ons-col>
+            <ons-col style="text-align:center;">
+                <span style="color:white;font-size:10pt;" ng-repeat="bandara2 in bandara" ng-if="to == bandara2.kode">{{bandara2.kota}}, {{bandara2.negara}}</span>
+            </ons-col>
+        </ons-row>
+        <hr style="margin:2% 0 2% 0;"/>
+        <ons-row vertical-align="center">
+            <ons-col style="text-align:center;">
+                <span style="color:white;font-size:10pt;">DATE</span><br>
+                <span style="color:white;font-weight:bold;">Sun, 14 Jan</span>
+            </ons-col>
+            <ons-col style="text-align:center;">
+                <span style="color:white;font-size:10pt;">PASSENGER</span><br>
+                <span style="color:white;font-weight:bold;">{{total_passenger}} pax</span>
+            </ons-col>
+            <ons-col style="text-align:center;">
+                <span style="color:white;font-size:10pt;">CLASS</span><br>
+                <span style="color:white;font-weight:bold;">{{select_class_flight}}</span>
+            </ons-col>
+        </ons-row>
+    </div>
+    <ons-tabbar position="top" style="margin-top:40%;" swipeable scrollable>
+        <ons-tab page="departing_flight.html" style="padding:1%;background-color:#71767f;">
+            <img src="assets/icon/menu-1.png" width="15px" alt="" />
+        </ons-tab>
+        <ons-tab page="departing_flight.html" style="padding:1%;background-color:#71767f;">
+            <span style="color:white;">PRICE</span>
+        </ons-tab>
+        <ons-tab page="departing_flight.html" style="padding:1%;background-color:#71767f;">
+            <span style="color:white;">AIRLINES</span>
+        </ons-tab>
+        <ons-tab page="departing_flight.html" style="padding:1%;background-color:#71767f;">
+            <span style="color:white;">CLASS</span>
+        </ons-tab>
+        <ons-tab page="departing_flight.html" style="padding:1%;background-color:#71767f;">
+            <span style="color:white;">TIMES</span>
+        </ons-tab>
+    </ons-tabbar>
+</ons-page>

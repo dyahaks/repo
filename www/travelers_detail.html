@@ -1,0 +1,82 @@
+<ons-page ng-controller="travelingCtrl" id="trans-detail" ng-init="traveler_detail()">
+    <ons-toolbar>
+        <div class="left">
+            <ons-back-button> </ons-back-button>
+        </div>
+        <div class="center" style="text-align:center;">
+            <span style="font-size:14pt;font-weight:bold;">Travelers Detail</span>
+        </div>
+        <div class="right" style="padding-top:2%">
+            <ons-toolbar-button ng-click="myNav.pushPage('notifications.html')">
+                <img src="assets/icon/bells.png" width="25px" height="25px"/>
+                <span class="notification" style="font-size: 8pt;margin-left:-25%">1</span>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    
+    <div class="padding">
+        <h2>{{typePassenger}} {{selectCountPassenger}}</h2> 
+        <div class="padding darkBlue" style="color: white; font-size: 10pt; border-radius: 15px;">
+            <ons-row>
+                <span>Title </span>
+            </ons-row>
+            <ons-row>
+                <div style="background-color: #4b5c81; opacity: 0.7; width: 100%; margin-top: 3%; height: 45%; border-radius: 15px;" class="padding">
+                    <select name="title" style="color: white; width: 100%; background-color: transparent; font-size: 10pt; border: none;">
+                        <option value="Mr">Mr.</option> 
+                        <option value="Ms">Ms.</option>
+                        <option value="Mrs">Mrs.</option>
+                    </select>
+                </div>
+            </ons-row>
+            <ons-row style="margin-top: 5%;">
+                <span>Fullname </span>
+            </ons-row>
+            <ons-row>
+                <div style="background-color: #4b5c81; opacity: 0.7; width: 100%; margin-top: 3%; border-radius: 15px;" class="">
+                    <input type="text" id="fullname{{typePassenger+selectCountPassenger}}" style="color: white; background-color: transparent; border: none; width: 100%;" />
+                </div>
+            </ons-row>
+            <ons-row style="margin-top: 5%;">
+                <span>Phone</span>
+            </ons-row>
+            <ons-row>
+                <div style="background-color: #4b5c81; opacity: 0.7; width: 100%; margin-top: 3%; border-radius: 15px;" class="">
+                    <input type="number" id="phone_travelers" style="color: white; background-color: transparent; border: none; width: 100%;" />
+                </div>
+            </ons-row>
+            <ons-row style="margin-top: 5%;">
+                <span>Email</span>
+            </ons-row>
+            <ons-row>
+                <div style="background-color: #4b5c81; opacity: 0.7; width: 100%; margin-top: 3%; border-radius: 15px;" class="">
+                    <input type="email" id="email_travelers" style="color: white; background-color: transparent; border: none; width: 100%;" />
+                </div>
+            </ons-row>
+            <ons-row style="margin-top: 5%;">
+                <span>Date of birth </span>
+            </ons-row>
+            <ons-row>
+                <!--<div style="background-color: #4b5c81; opacity: 0.7; width: 100%; margin-top: 3%; border-radius: 15px;" class="padding">
+                    <input type="date" name="dob_travelers" style="color: white; background-color: transparent; border: none; width: 100%;" />
+                </div>-->
+                <div class="padding-3" style="background-color: #4b5c81; opacity: 0.7; width: 100%; margin-top: 3%; border-radius: 15px;">
+                    <!--<img src="assets/icon/receive-white.png" ng-click="scanBarcode();" height="35px" alt="" />-->
+                    <ons-icon icon="ion-ios-calendar-outline" class="text-white" size="20pt"></ons-icon>
+                    <input type="date" id="dob_travelers" style="color: white; background-color: transparent; margin-left: 0%; border: none; width: 80%;" />
+                </div>
+            </ons-row>
+            <ons-row style="margin-top: 5%;">
+                <span>ID card/ Passport/ Driving License</span>
+            </ons-row>
+            <ons-row>
+                <div style="background-color: #4b5c81; opacity: 0.7; width: 100%; margin-top: 3%; border-radius: 15px;" class="">
+                    <input type="number" id="id_card_travelers" style="color: white; background-color: transparent; border: none; width: 100%;" />
+                </div>
+            </ons-row>
+            <div style="margin: 10% 0% 5% 0%">
+                <ons-button modifier="large" style="background-color: #1A429E; width: 100%;" ng-click="flight_detail();">SUBMIT</ons-button>
+            </div>
+        </div>
+    </div>
+</ons-page>

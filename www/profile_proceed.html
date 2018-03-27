@@ -1,0 +1,59 @@
+<ons-dialog var="dialog" id="dialog-upgrade" cancelable width="85%" height="80%">
+    <div class="padding bg-white">
+        <div class="padding center text-soft-blue" style="font-size: 14pt;">
+            <span>
+                Upload Document
+            </span>
+        </div>
+        <div style="font-size: 10pt;">
+            <ons-row class="padding" vertical-align="center">
+                <ons-col width="35%">
+                    <div class="center">
+                        <img src="assets/icon/checked.png" width="50pt" alt="" />
+                    </div>
+                </ons-col>
+                <ons-col width="65%">
+                    <div class="left">
+                        <div><b>Identity card (Front)</b></div>
+                        <div class="text-grey" style="font-size: 8pt;">
+                            Name-file.jpg
+                        </div>
+                    </div>
+                </ons-col>
+            </ons-row>
+            <ons-row class="padding-left-5 padding-right-5" vertical-align="center">
+                <ons-col width="35%">
+                    <div class="center">
+                        <img src="assets/icon/checked.png" width="50pt" alt="" />
+                    </div>
+                </ons-col>
+                <ons-col width="65%">
+                    <div class="left">
+                        <div><b>Identity card (Back)</b></div>
+                        <div class="text-grey" style="font-size: 8pt;">
+                            Name-file.jpg
+                        </div>
+                    </div>
+                </ons-col>
+            </ons-row>
+            <ons-row class="padding" vertical-align="center">
+                <ons-col width="35%">
+                    <div class="center">
+                        <img src="assets/icon/checked.png" width="50pt" alt="" />
+                    </div>
+                </ons-col>
+                <ons-col width="65%">
+                    <div class="left">
+                        <div><b>Selfie</b></div>
+                        <div class="text-grey" style="font-size: 8pt;">
+                            Name-file.jpg
+                        </div>
+                    </div>
+                </ons-col>
+            </ons-row>
+        </div>
+        <div class="center">
+            <ons-button class="bg-soft-blue border-25 w100 padding-3" ng-click="dialog.hide(); myNav.pushPage('dashboard.html');" modifier="larger">PROCEED</ons-button>
+        </div>
+    </div>
+</ons-dialog>

@@ -1,0 +1,43 @@
+<ons-page id="mypage" ng-controller="walkthroughCtrl">
+    <div style="padding-left: 5%; padding-right: 5%; width:90%; height: 90%; margin-top: -5%;">
+        <div style="background-image: url('assets/icon/walkthrough.png'); 
+                    height: 100%;
+                    padding: 5%;
+                    background-position: center; 
+                    background-size: 90% 70%; 
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;">
+            <ons-carousel swipeable auto-scroll var="carousel" style="margin: 22% 5% 5% 5%" initial-index="0" id="carousel">
+                <ons-carousel-item class="item-slide">
+                    <div>
+                        <img src="assets/gift.PNG" width="150px" height="150px" /> <br />
+                        <div class="title-slide"> Gift </div>
+                        <div>Lorem ipsum dolor sit amet, <br/> consectetur adipiscing elit. </div>
+                    </div>
+                </ons-carousel-item>
+                <ons-carousel-item class="item-slide">
+                    <div>
+                        <img src="assets/secure.PNG" width="150px" height="150px"/>
+                        <div class="title-slide"> Secure </div>
+                        <div>Lorem ipsum dolor sit amet, <br/> consectetur adipiscing elit. </div>
+                    </div>
+                </ons-carousel-item>
+                <ons-carousel-item class="item-slide">
+                    <div>
+                        <img src="assets/payless.PNG" width="150px" height="150px"/> 
+                        <div class="title-slide"> Payless </div>
+                        <div>Lorem ipsum dolor sit amet, <br/> consectetur adipiscing elit. </div>
+                    </div>
+                </ons-carousel-item>
+            </ons-carousel>    
+        </div>
+    </div>
+    <div id="footer" style="text-align: center;">
+        <span class="indicators circle-player" style="color:#FFFFFF;"><i class="fa fa-circle"></i></span>
+        <span class="indicators circle-player" style="color:#3a5a91;"><i class="fa fa-circle"></i></span>
+        <span class="indicators circle-player" style="color:#3a5a91;"><i class="fa fa-circle"></i></span>
+    </div>
+    <div style="text-align: center;">
+        <ons-button class="btnWhite" ng-click="myNav.resetToPage('dashboard.html');" style="border-radius: 15pt; padding: 1%; font-size: 12pt; font-style: bold;width:90%">GET STARTED</ons-button>
+    </div>
+</ons-page>

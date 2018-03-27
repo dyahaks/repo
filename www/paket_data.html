@@ -1,0 +1,37 @@
+<ons-page ng-controller="paketData">
+    <ons-card class="topup" ng-repeat="paket_data in paket_data">
+        <ons-row vertical-align="center">
+            <ons-col align="left">
+                <div ng-hide="paket_data.discPrice == ''">
+                    <span class="text-discount">{{paket_data.price}}</span>
+                </div>
+                <div>
+                    <span class="text-price" ng-hide="paket_data.discPrice == ''">{{paket_data.discPrice}}</span>
+                    <span class="text-price" ng-show="paket_data.discPrice == ''">{{paket_data.price}}</span><br>
+                    <span class="text-desc">{{paket_data.desc}}</span><br>
+                    <span class="text-promo">{{paket_data.promo}}</span>
+                </div>
+            </ons-col>
+            <ons-col align="right">
+                <ons-button class="grid-menu">&nbsp&nbsp SELECT &nbsp&nbsp</ons-button>
+            </ons-col>
+        </ons-row>
+    </ons-card>
+    <!--<ons-card class="topup">
+        <ons-row>
+            <ons-col align="left">
+                <div>
+                    <span class="text-discount">Rp 12.000</span>
+                </div>
+                <div>
+                    <span class="text-price">Rp 10.000</span><br>
+                    <span class="text-desc">Masa Aktif 7 hari</span><br>
+                    <span class="text-promo">PALING MURAH</span>
+                </div>
+            </ons-col>
+            <ons-col align="right">
+                <ons-button class="grid-menu"> SELECT </ons-button>
+            </ons-col>
+        </ons-row>
+    </ons-card>-->
+</ons-page>

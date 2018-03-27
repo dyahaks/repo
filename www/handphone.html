@@ -1,0 +1,44 @@
+<ons-page id="home-page">
+    <ons-toolbar>
+        <div class="left">
+            <ons-back-button> </ons-back-button>
+        </div>
+        <div class="center" style="text-align:center;">
+            <span style="font-size:14pt;font-weight:bold;">Handphone</span>
+        </div>
+        <div class="right" style="padding-top:2%">
+            <ons-toolbar-button ng-click="myNav.pushPage('notifications.html')">
+                <img src="assets/icon/bells.png" width="25px" height="25px"/>
+                <span class="notification" style="font-size: 8pt;margin-left:-25%">1</span>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+<!--menu-->
+  <div>
+    <ons-row vertical-align="center" class="topmenu" style="padding:3% 5% 3% 5%;">
+        <ons-col align="left">
+            <div>
+                <span style="color:#e1e0e0">Your balance</span>
+             </div>
+             <div>
+                <span style="font-size:20pt;color:white;">Rp 250.000</span>
+             </div>
+        </ons-col>
+        <ons-col align="right">
+            <ons-button style="margin:7%;border-radius:15px;background:#041b42;padding-top:1%">TOP UP</ons-button>
+        </ons-col>
+    </ons-row>
+    <ons-row vertical-align="center" class="topmenu" style="padding:1% 2% 3% 2%;">
+        <img src="assets/icon/smartphone.png" width="25" height="25" style="margin:3%"/>
+        <input type="number" id="noHP" class="noHP" placeholder="No Handphone"/>
+    </ons-row>
+  </div>
+<ons-tabbar position="top" style="margin-top:38%">
+  <ons-tab page="pulsa.html" class="tab-bar topupHP" style="padding:1%;">
+    <span>PULSA</span>
+  </ons-tab>
+  <ons-tab page="paket_data.html" class="tab-bar topupHP" style="padding:1%;">
+    <span>PAKET DATA</span>
+  </ons-tab>
+</ons-tabbar>
+</ons-page>

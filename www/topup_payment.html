@@ -1,0 +1,51 @@
+<ons-page ng-controller="topup" id="topupPayment" ng-init="loadTopupPayment()">
+    <ons-toolbar>
+        <div class="left">
+            <ons-back-button> Back </ons-back-button>
+        </div>
+        <div class="center" style="text-align:center;">
+            <span style="font-size:14pt;font-weight:bold;">Top Up</span>
+        </div>
+        <div class="right" style="padding-top:2%">
+            <ons-toolbar-button>
+                <img src="assets/icon/bells.png" width="25px" height="25px"/>
+                <span class="notification" style="font-size: 8pt;margin-left:-25%">1</span>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    <div style="background-color:#e3e3e3;">
+        <ons-row vertical-align="center" class="topmenu" style="height:15%;padding:2% 2% 5% 2%;">
+            <ons-col align="left">
+                <div style="padding:3%">
+                    <span style="color:#e1e0e0;font-size:10pt;">Nominal Top Up:</span>
+                 </div>
+                 <div style="padding-left:3%">
+                    <span style="font-size:20pt;color:white;" id="nominalTopup">{{nominal}}</span>
+                 </div>
+            </ons-col>
+        </ons-row>
+    
+        <ons-list>
+            <ons-list-header style="background-color:transparent;font-size:15pt;margin-top:3%;">Bank Transfer</ons-list-header>
+            <ons-list-item modifier="chevron" style="width:94%; border-radius:5px; margin:3%;" id="list-white" ng-repeat="bank in topup_payment_bank" ng-if="bank.nominal == nominal" ng-click="pushNominal2()"tappable>
+                <div class="left">
+                    <img class="list-item__icon" width="40" src="{{bank.logo}}">
+                </div>
+                <div align="left">
+                        <span class="list-item__title">{{bank.name_bank}}</span><br>
+                        <span class="list-item__subtitle">Total Pembayaran {{bank.total}}</span>
+                </div>
+            </ons-list-item>
+            <ons-list-header style="background-color:transparent;font-size:15pt;">Gerai Ritel</ons-list-header>
+            <ons-list-item modifier="chevron" style="width:94%; border-radius:5px; margin:3%;" id="list-white" ng-repeat="ritel in topup_payment_ritel" ng-if="ritel.nominal == nominal"  tappable>
+                <div class="left">
+                    <img class="list-item__icon" width="40" src="{{ritel.logo}}">
+                </div>
+                <div align="left">
+                        <span class="list-item__title">{{ritel.name_ritel}}</span><br>
+                        <span class="list-item__subtitle">Total Pembayaran {{ritel.total}}</span>
+                </div>
+            </ons-list-item>
+        </ons-list>
+    </div>
+</ons-page>

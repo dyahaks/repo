@@ -1,0 +1,62 @@
+<ons-page ng-controller="smsVerificationCtrl" id="pinPage" ng-init="init();">
+    <ons-toolbar style="background: #083075; color: white;" class="white" fixed-style modifier="transparent">
+        <ons-back-button style="color: white;"> Back </ons-back-button>
+    </ons-toolbar>
+    <div id="pin">
+    <span style="font-size: 20pt; padding: 0; text-align: center;">SMS Verification</span>
+    <span style="font-size: 11pt; color: #62819a; text-align: center; font-weight: 500;"> An SMS verification just sent <br/> to your registered mobile phone </span>
+        <div class="dots"  style="margin-top: -5%; margin-bottom: 3%;">
+            <div class="dot" id="bullet1">{{passcode.substring(0, 1)}}</div>
+            <div class="dot" id="bullet2">{{passcode.substring(1, 2)}}</div>
+            <div class="dot" id="bullet3">{{passcode.substring(2, 3)}}</div>
+            <div class="dot" id="bullet4">{{passcode.substring(3, 4)}}</div>
+        </div>
+      <span style="color: #425bb4; text-style: underline;" id="timer" ng-click="count()"><u>Resend Code</u></span>
+      <div class="center" style="margin-top: 3%">
+        <ons-row>
+            <ons-col>
+                <div class="number" ng-click="add(1)"> 1 </div>
+            </ons-col>
+            <ons-col>
+                <div class="number" ng-click="add(2)"> 2 </div>
+            </ons-col>
+            <ons-col>
+                <div class="number" ng-click="add(3)"> 3 </div>
+            </ons-col>
+        </ons-row>
+        <ons-row>
+            <ons-col>
+                <div class="number" ng-click="add(4)"> 4 </div>
+            </ons-col>
+            <ons-col>
+                <div class="number" ng-click="add(5)"> 5 </div>
+            </ons-col>
+            <ons-col>
+                <div class="number" ng-click="add(6)"> 6 </div>
+            </ons-col>
+        </ons-row>
+        <ons-row>
+            <ons-col>
+                <div class="number" ng-click="add(7)"> 7 </div>
+            </ons-col>
+            <ons-col>
+                <div class="number" ng-click="add(8)"> 8 </div>
+            </ons-col>
+            <ons-col>
+                <div class="number" ng-click="add(9)"> 9 </div>
+            </ons-col>
+        </ons-row>
+        <ons-row>
+            <ons-col>
+                <div >  </div>
+            </ons-col>
+            <ons-col>
+                <div class="number" ng-click="add(0)"> 0 </div>
+            </ons-col>
+            <ons-col>
+                <div >  </div>
+            </ons-col>
+        </ons-row>
+      </div>
+    </div>
+</ons-page>

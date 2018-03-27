@@ -1,0 +1,38 @@
+<ons-page ng-controller="pulsa">
+    <ons-card class="topup" ng-repeat="pulsa in pulsa">
+        <ons-row vertical-align="center">
+            <ons-col align="left">
+                <div ng-hide="pulsa.discPrice == ''">
+                    <span class="text-discount">{{pulsa.price}}</span>
+                </div>
+                <div>
+                    <span class="text-price" ng-hide="pulsa.discPrice == ''">{{pulsa.discPrice}}</span>
+                    <span class="text-price" ng-show="pulsa.discPrice == ''">{{pulsa.price}}</span><br>
+                    <span class="text-desc">{{pulsa.desc}}</span><br>
+                    <span class="text-promo">{{pulsa.promo}}</span>
+                </div>
+            </ons-col>
+            <ons-col align="right">
+                <ons-button class="grid-menu"  ng-click="show('pulsa_dialog.html');">&nbsp&nbsp SELECT &nbsp&nbsp</ons-button>
+                <!--<ons-button class="grid-menu" ng-click="myModal.show();">&nbsp&nbsp SELECT &nbsp&nbsp</ons-button>-->
+            </ons-col>
+        </ons-row>
+    </ons-card>
+    <!--<ons-card class="topup">
+        <ons-row>
+            <ons-col align="left">
+                <div>
+                    <span class="text-discount">Rp 12.000</span>
+                </div>
+                <div>
+                    <span class="text-price">Rp 10.000</span><br>
+                    <span class="text-desc">Masa Aktif 7 hari</span><br>
+                    <span class="text-promo">PALING MURAH</span>
+                </div>
+            </ons-col>
+            <ons-col align="right">
+                <ons-button class="grid-menu"> SELECT </ons-button>
+            </ons-col>
+        </ons-row>
+    </ons-card>-->
+</ons-page>

@@ -1,0 +1,70 @@
+<ons-page ng-controller="uploadKtpBackCtrl">
+    <ons-toolbar>
+        <div class="left">
+            <ons-back-button> </ons-back-button>
+        </div>
+        <div class="center" style="text-align:center;">
+            <span style="font-size:14pt;font-weight:bold;">Upload KTP</span>
+        </div>
+        <div class="right" style="padding-top:2%">
+            <ons-toolbar-button ng-click="myNav.pushPage('notifications.html');">
+                <img src="assets/icon/bells.png" width="25px" height="25px"/>
+                <span class="notification" style="font-size: 8pt;margin-left:-25%">1</span>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    <div class="padding">
+        <div class="padding center">
+            <div>
+                <ons-row>
+                    <ons-col width="10%" align="center">
+                        <div class="circle-outline">
+                            <div class="circle-inner opacity-50">
+                                <span style="display: inline-block; margin-top: 3pt;"> 1 </span>
+                            </div>
+                        </div>
+                    </ons-col>
+                    <ons-col width="35%" align="center">
+                        <div style="padding: 0 3pt 0 2pt;">
+                            <hr class="line"/>
+                        </div>
+                    </ons-col>
+                    <ons-col width="10%" align="center">
+                        <div class="circle-outline">
+                            <div class="circle-inner">
+                                <span style="display: inline-block; margin-top: 3pt;"> 2 </span>
+                            </div>
+                        </div>
+                    </ons-col>
+                    <ons-col width="35%" align="center">
+                        <div style="padding: 0 3pt 0 2pt;">
+                            <hr class="line"/>
+                        </div>
+                    </ons-col>
+                    <ons-col width="10%" align="center">
+                        <div class="circle-outline">
+                            <div class="circle-inner opacity-50">
+                                <span style="display: inline-block; margin-top: 3pt;"> 3 </span>
+                            </div>
+                        </div>
+                    </ons-col>
+                </ons-row>
+            </div>
+        </div>
+        <div class="padding center">
+            <span>
+                Upload clean and readable photo 
+                of a back side of your identity document <br/>
+            </span>
+        </div>
+        <div class="center padding" style="width: 90%; height: 100%;">
+            <img id="photo_ktp_back" src="" alt="" width="100%" height="100%" class="center" />
+        </div>
+        <div class="padding center">
+            <ons-icon ng-click="take_photo();" icon="ion-camera" class="icon-camera" size="40pt"></ons-icon>
+        </div>
+        <div class="padding center">
+            <ons-button modifier="large" class="bg-soft-blue border-25 padding-3" ng-click="myNav.pushPage('profile_upload_selfie.html', {animation: 'none'});">SUBMIT</ons-button>
+        </div>
+    </div>
+</ons-page>

@@ -1,0 +1,39 @@
+<ons-page id="mypage" ng-controller="signinCtrl" ng-init="signIn()">
+    <div class="padding primaryColor" style="margin: 0 auto; height: 80%;">
+        <div style="margin-top: 25%; margin-bottom: 5%;">
+            <h1> Sign in </h1>
+        </div>
+        <div style="width: 100%;">
+            <input type="number" id="phoneNumber" placeholder="Phone Number" class="darkBlue" />
+        </div>
+        <div style="color: #8090ac; font-size: 10pt; padding: 7%; text-align: center;">
+            <span> Forget Password? </span>
+        </div>
+        <div>
+            <ons-button class="btnWhite" ng-click="myNav.pushPage('smsVerification.html');" modifier="large">SIGN IN</ons-button>
+        </div>
+        <ons-row class="padding">
+            <div style="width: 45%; vertical-align: middle; margin-top: 2%;">
+                <hr style="border: 0.5pt solid white;" />
+            </div>
+            <div style="width: 5%; font-size: 10pt; color: white; padding-left: 2%; padding-right: 2%;">
+                Or
+            </div>
+            <div style="width: 45%; margin-top: 2%;">
+                <hr style="border: 0.5pt solid white;" />
+            </div>
+        </ons-row>
+        <div ng-show="stat==0">
+            <ons-button class="btnGuest" ng-click="myNav.pushPage('dashboard.html');" modifier="large"><img src="assets/icon/guest.png" width="15" height="15"/> &nbsp; &nbsp; &nbsp; ENTER AS GUEST </ons-button>
+        </div>
+        <div style="padding-top: 5%;">
+            <ons-button class="btnFacebook" modifier="large"><img src="assets/icon/facebook.png" width="15" height="15" /> &nbsp;&nbsp; LOGIN WITH FACEBOOK </ons-button>
+        </div>
+    </div>
+    <ons-bottom-toolbar style="border: none; background-color: transparent;">
+        <div class="footer">
+            <span>Don't have account?<span ng-click="myNav.pushPage('register.html');" style="font-weight:bold;"> Sign up</span> now</span>
+        </div>
+    </ons-bottom-toolbar>
+    
+</ons-page>

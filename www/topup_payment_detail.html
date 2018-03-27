@@ -1,0 +1,51 @@
+<ons-page ng-controller="topup" id="topupPaymentDetail" ng-init="loadTopupPaymentDetail()">
+    <ons-toolbar>
+        <div class="left">
+            <ons-back-button> Back </ons-back-button>
+        </div>
+        <div class="center" style="text-align:center;">
+            <span style="font-size:14pt;font-weight:bold;">Top Up</span>
+        </div>
+        <div class="right" style="padding-top:2%">
+            <ons-toolbar-button>
+                <img src="assets/icon/bells.png" width="25px" height="25px"/>
+                <span class="notification" style="font-size: 8pt;margin-left:-25%">1</span>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    <div>
+        <ons-row vertical-align="center" class="topmenu" style="height:15%;padding:2% 2% 5% 2%;">
+            <ons-col align="left">
+                <div style="padding:3%">
+                    <span style="color:#e1e0e0;font-size:10pt;">Nominal Top Up:</span>
+                 </div>
+                 <div style="padding-left:3%">
+                    <span style="font-size:20pt;color:white;" id="nominalTopupDetail">{{nominal}}</span>
+                 </div>
+            </ons-col>
+        </ons-row>
+        <div style="text-align:center;margin:10% 5% 5% 5%;font-size:10pt">
+            <span>Lorem ipsun dolor sit amet, consectetur adipiscing elit,<br>sed do eiusmod tempor incididunt ut labore et dolore<br>magna aliqua. ut enim ad minim veniam</span>
+        </div>
+        <div align="center" style="margin:10%;">
+            <ons-row style="font-size:20pt;width:50%;" id="timer" ng-click="count()">
+            </ons-row>
+            <ons-row style="color:gray;width:50%;">
+                <ons-col>Jam</ons-col>
+                <ons-col></ons-col>
+                <ons-col>Menit</ons-col>
+                <ons-col></ons-col>
+                <ons-col>Detik</ons-col>
+            </ons-row>
+        </div>
+        <ons-row style="background-color:Gainsboro;margin:2% 15% 15% 15%;padding:3%;border:1px gray solid;width:70%" vertical-align="center">
+            <ons-col align="left"><span style="font-size:12pt;">88908-1094757766</span></ons-col>
+            <ons-col align="right" width="25%"><span><u>Copy</u></span></ons-col>
+        </ons-row>
+        <ons-list>
+            <ons-list-item id="list-white">1. Masukan kartu ke mesin ATM</ons-list-item>
+            <ons-list-item id="list-white">2. Pilih menu transaksi</ons-list-item>
+            <ons-list-item id="list-white">3. Masukan 4 digit awal "7777"</ons-list-item>
+        </ons-list>
+    </div>
+</ons-page>

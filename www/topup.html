@@ -1,0 +1,34 @@
+<ons-page id="home-page" ng-controller="topup">
+    <ons-toolbar>
+        <div class="left">
+            <ons-back-button style="color: white;"> Back </ons-back-button>
+        </div>
+        <div class="center" style="text-align:center;">
+            <span style="font-size:14pt;font-weight:bold;">Top Up</span>
+        </div>
+        <div class="right" style="padding-top:2%">
+            <ons-toolbar-button>
+                <img src="assets/icon/bells.png" width="25px" height="25px"/>
+                <span class="notification" style="font-size: 8pt;margin-left:-25%">1</span>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    <ons-card class="padding topmenu" style="border-radius:10px;">
+        <span style="color:white;font-size:10pt;">Nominal Top Up:</span><br>
+        <select class="gray" id="selectNominal" style="width:100%; margin-bottom:3%; color:white; padding:3%; border:none; border-radius:5px;">
+            <option value="50.000">Rp 50.000</option>
+            <option value="100.000">Rp 100.000</option>
+            <option value="150.000">Rp 150.000</option>
+            <option value="200.000">Rp 200.000</option>
+        </select>
+        <ons-button modifier="large" class="topmenu-menu" ng-click="pushNominal()" style="margin:0;border-radius:5px;">SELECT METHOD</ons-button>
+    </ons-card>
+    <div>
+        <ons-row vertical-align="center" class="padding">
+            <img src="assets/icon/lamp.png" width="60" height="60"/><span style="font-weight:bold;font-size:13pt;">Isi saldo Rupi semakin Mudah:</span><br>        
+        </ons-row>
+        <span class="padding" style="font-size:13pt;">1. Pilih nominal yang diinginkan</span><br><br>
+        <span class="padding" style="font-size:13pt;">2. Pilih menode Top Up</span><br><br>
+        <span class="padding" style="font-size:13pt;">3. Selesai saldo anda akan bertambah</span><br><br>
+    </div>
+</ons-page>

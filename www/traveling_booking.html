@@ -1,0 +1,22 @@
+<ons-dialog var="dialog" cancelable>
+    <div class="bg-navy padding text-white">
+        <h4>Booking Details Correct?</h4>
+        <span style="margin-top: 5%; margin-bottom: 3%;">Lorem ipsum dolor sir amet, consectetur adipiscing
+            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+        </span>
+        
+        <div class="padding-top-5" style="font-size: 10pt;">
+            <ons-row>
+                <ons-col>
+                    
+                </ons-col>
+                <ons-col  style="margin-right: 3%;">
+                    <ons-button class="bg-soft-blue border-15" ng-click="dialog.hide();">CHECK AGAIN</ons-button>&nbsp;
+                </ons-col>
+                <ons-col>
+                    <ons-button class="bg-green border-15" id="booking-travel" ng-click="myNav.pushPage('enterPin.html', {animation: 'lift'}); dialog.hide();">NEXT</ons-button>
+                </ons-col>
+            </ons-row>
+        </div>
+    </div>
+</ons-dialog>

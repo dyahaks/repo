@@ -1,0 +1,54 @@
+<ons-dialog id="dialog-bottom" var="dialog" cancelable ng-controller="transferCtrl" animation="default">
+    <div class="topmenu-menu" style="margin: 0">
+        <ons-row vertical-align="center" style="">
+            <ons-col align="left">
+                <div style="padding:2% 0 0 3%">
+                    <span style="color:#e1e0e0; font-size: 9pt;">Your balance</span>
+                 </div>
+                 <div style="padding:0 3% 0 3%">
+                    <span style="font-size:16pt;color:white;">Rp 250.000</span>
+                 </div>
+            </ons-col>
+        </ons-row>
+    </div>
+    <div class="topmenu" style="color: white;">
+        <ons-row style="padding: 5% 5% 0 5%">
+            <ons-col> 
+                Destination number
+            </ons-col> 
+            <ons-col>
+                <div style="text-align: right;">
+                   087875231579
+                </div>
+            </ons-col>
+        </ons-row>
+        <ons-row style="padding: 5% 5% 0 5%">
+            <ons-col>
+                Amount:
+            </ons-col>
+            <ons-col>
+                <div style="text-align: right">
+                    Rp 50.000
+                </div>
+            </ons-col>
+        </ons-row>
+        <ons-row style="padding: 5% 5% 0 5%">
+            <ons-col width="30%">
+                Message:
+            </ons-col>
+            <ons-col width="70%">
+                <div style="text-align: right">
+                    Lorem ipsum test desciprtion
+                </div>
+            </ons-col>
+        </ons-row>
+        <div style="color: #425BB4; font-size: 9pt; text-align: center; padding: 3%;">
+            <span> Our Terms and Conditions template will get you started with a </span>
+            <span style="color: white">Terms</span> and <span style="color: white">Condition agreement.</span>
+        </div>
+        <div class="center" style="margin-bottom: 5%; padding: 3% 8% 8% 8%;">
+            <ons-button style="background-color: #163e95;" ng-click="sendTransfer(); dialog.hide();">Confirm</ons-button><br/>
+        </div>
+    </div>
+</ons-dialog>
+

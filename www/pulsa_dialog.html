@@ -1,0 +1,51 @@
+<ons-dialog var="dialog" id="dialog-bottom" ng-controller="pulsa" cancelable>
+    <div class="topmenu-menu" style="margin: 0 auto">
+        <ons-row vertical-align="center" >
+            <ons-col align="left">
+                <div style="padding:2% 0 0 3%">
+                    <span style="color:#e1e0e0; font-size: 9pt;">Your balance</span>
+                 </div>
+                 <div style="padding:0 3% 0 3%">
+                    <span style="font-size:16pt;color:white;">Rp 250.000</span>
+                 </div>
+            </ons-col>
+        </ons-row>
+    </div>
+    <ons-list class="topmenu" style="text-align: center;">
+        <ons-list-item modifier="nodivider">
+            <div class="left">
+                <img class="list-item__icon" width="40" src="assets/icon/telkomsel-icon.png">
+            </div>
+            <div align="left" style="color:white">
+                    <span class="list-item__title">Pulsa Simpati<br>Rp 50.000</span><br>
+                    <span class="list-item__subtitle">Masa aktif 30 hari</span>
+            </div>
+        </ons-list-item>
+    </ons-list>
+  <div class="topmenu" style="text-align: center; padding: 5%; margin:0 auto;color:white">
+    <ons-row>
+        <ons-col align="left">
+            <span>Destination Number :</span><br>
+            <span>Amount :</span>
+        </ons-col>
+        <ons-col align="right">
+            <span>087875231576</span><br>
+            <span>Rp 50.000</span>
+        </ons-col>
+    </ons-row>
+    <div style="width: 100%; margin: 2% 0 2% 0;">
+        <hr style="border: 0.5px solid white;" />
+    </div>
+    <ons-row>
+        <ons-col align="left">
+            <span style="font-weight:bold;">Total</span><br>
+        </ons-col>
+        <ons-col align="right">
+            <span style="font-weight:bold;">Rp 50.000</span><br>
+        </ons-col>
+    </ons-row>
+    <div style="margin: 3% 5% 3% 5%; padding-bottom: 5%;">
+      <ons-button style="background-color:#163e95" ng-click="dialog.hide(); pay();">PAY NOW</ons-button>
+    </div>
+  </div>
+</ons-dialog>

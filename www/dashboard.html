@@ -1,0 +1,29 @@
+<ons-page ng-controller="dashboard">
+    <ons-toolbar>
+        <div class="left">
+        </div>
+        <div class="center" style="text-align:center;">
+            <span id="toolbar-title" style="font-size:14pt;font-weight:bold;"></span>
+        </div>
+        <div class="right" style="padding-top:2%">
+            <ons-toolbar-button onClick="myNav.pushPage('notifications.html')">
+                <img src="assets/icon/bells.png" width="25px" height="25px"/>
+                <span class="notification" style="font-size: 8pt;margin-left:-25%">1</span>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    <ons-tabbar position="bottom">
+      <ons-tab page="home.html" class="tab-bar" style="padding:1%">
+        <img src="assets/icon/home.png" class="tabbar-nn-logo svg" width="20">
+      </ons-tab>
+      <ons-tab page="transaction.html" class="tab-bar" style="padding:1%">
+        <img src="assets/icon/transaction.png" class="tabbar-nn-logo svg" width="20">
+      </ons-tab>
+      <ons-tab page="help.html" class="tab-bar" style="padding:1%">
+        <img src="assets/icon/help.png" class="tabbar-nn-logo svg" width="20">
+      </ons-tab>
+      <ons-tab page="profile.html" class="tab-bar" style="padding:1%">
+        <img src="assets/icon/profile.png" class="tabbar-nn-logo svg" width="20">
+      </ons-tab>
+    </ons-tabbar>
+</ons-page>

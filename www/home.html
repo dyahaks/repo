@@ -1,0 +1,123 @@
+<ons-page id="home-page">
+<!--menu-->
+    <div style="">
+        <div class="topmenu" style="">
+            <ons-row vertical-align="center" style="padding:3% 5% 3% 5%;">
+                <ons-col align="left">
+                    <div style="">
+                        <span style="color:#e1e0e0">Your balance</span>
+                     </div>
+                     <div style="">
+                        <span style="font-size:20pt;color:white;">Rp 250.000</span>
+                     </div>
+                </ons-col>
+                <ons-col align="right">
+                    <ons-button style="margin:5%;border-radius:15px;background:#041b42;padding-top:1%" onClick="myNav.pushPage('topup.html')">TOP UP</ons-button>
+                </ons-col>
+            </ons-row>
+             <ons-row style=" width:100%;background-color:#3658a3">
+                <ons-col vertical-align="middle" class="topmenu-menu" style="margin-left:0;" ng-click="myNav.pushPage('transfer.html');">
+                  <div class="topmenu-menu-img">
+                    <img src="assets/icon/transfer.png" height="25px"/>
+                  </div>
+                  <div style="text-align: center;">
+                    <span style="font-size:9pt;">Transfer</span>
+                  </div>
+                </ons-col>
+                <ons-col vertical-align="middle" class="topmenu-menu" ng-click="myNav.pushPage('qrCode.html');">
+                  <div class="topmenu-menu-img">
+                    <img src="assets/icon/receive.png" height="25px"/>
+                  </div>
+                  <div style="text-align: center;">
+                    <span style="font-size:9pt;">Receive</span>
+                  </div>
+                </ons-col>
+                <ons-col vertical-align="middle" class="topmenu-menu">
+                  <div class="topmenu-menu-img">
+                    <img src="assets/icon/gift.png" height="25px"/>
+                  </div>
+                  <div style="text-align: center;">
+                    <span style="font-size:9pt;">Gift</span>
+                  </div>
+                </ons-col>
+            </ons-row>
+        </div>
+    <!--grid menu 1-->
+     <ons-row height="25%">
+        <ons-col vertical-align="middle" class="grid-menu">
+          <div style="margin-bottom:5%; text-align: center;" >
+            <img src="assets/icon/emoney.png" height="40px"/>
+          </div>
+          <div style="text-align: center;">
+            <span style="font-size:9pt;">E-MONEY</span>
+          </div>
+        </ons-col>
+        <ons-col vertical-align="middle" class="grid-menu" onClick="myNav.pushPage('purchase.html')">
+          <div style="margin-bottom:5%; text-align: center;" >
+            <img src="assets/icon/purchase.png" height="40px"/>
+          </div>
+          <div style="text-align: center;">
+            <span style="font-size:9pt;">PURCHASE</span>
+          </div>
+        </ons-col>
+        <ons-col vertical-align="middle" class="grid-menu">
+          <div style="margin-bottom:5%; text-align: center;" >
+            <img src="assets/icon/payment.png" height="40px"/>
+          </div>
+          <div style="text-align: center;">
+            <span style="font-size:9pt;">PAYMENT</span>
+          </div>
+        </ons-col>
+      </ons-row>
+    <!--grid menu 2-->
+     <ons-row height="25%">
+        <ons-col vertical-align="middle" class="grid-menu" ng-click="myNav.pushPage('traveling.html');">
+          <div style="margin-bottom:5%; text-align: center;" >
+            <img src="assets/icon/travel.png" height="40px"/>
+          </div>
+          <div style="text-align: center;">
+            <span style="font-size:9pt;">TRAVELING</span>
+          </div>
+        </ons-col>
+        <ons-col vertical-align="middle" class="grid-menu">
+          <div style="margin-bottom:5%; text-align: center;" >
+            <img src="assets/icon/voucher.png" height="40px"/>
+          </div>
+          <div style="text-align: center;">
+            <span style="font-size:9pt;">VOUCHER</span>
+          </div>
+        </ons-col>
+        <ons-col vertical-align="middle" class="grid-menu">
+          <div style="margin-bottom:5%; text-align: center;" >
+            <img src="assets/icon/insurance.png" height="40px"/>
+          </div>
+          <div style="text-align: center;">
+            <span style="font-size:9pt;">INSURANCE</span>
+          </div>
+        </ons-col>
+      </ons-row>
+      <!--carousel promo-->
+      <ons-carousel direction="horizontal" style="height:30%;padding:2% 7% 2% 1%;align:center" swipeable auto-scroll var="carousel">
+        <ons-carousel-item style="border-radius:10px;margin:1%;">
+          <img src="assets/promo1.PNG" width="100%" height="100%" />
+        </ons-carousel-item>
+        <ons-carousel-item style="background-color: #085078;border-radius:10px;margin:1%;">
+          <div class="item-label padding">BLUE</div>
+        </ons-carousel-item>
+        <ons-carousel-item style="border-radius:10px;margin:1%;">
+          <img src="assets/promo1.PNG" width="100%" height="100%" />
+        </ons-carousel-item>
+        <ons-carousel-item style="background-color: #D38312;border-radius:10px;margin:1%;">
+          <div class="item-label padding">ORANGE</div>
+        </ons-carousel-item>
+      </ons-carousel>
+      <!--<div class="cover-label">
+          <ons-col style="text-align:center;">
+            <span class="indicators circle-player" style="color:#A9A9A9"> <i class="fa fa-circle"></i> </span>
+            <span class="indicators circle-player"> <i class="fa fa-circle"></i> </span>
+            <span class="indicators circle-player"> <i class="fa fa-circle"></i> </span>
+            <span class="indicators circle-player"> <i class="fa fa-circle"></i> </span>
+          </ons-col>
+      </div>-->
+  </div>
+</ons-page>

@@ -1,0 +1,48 @@
+<ons-page id="notifications" ng-controller="notifications">
+    <ons-toolbar>
+        <div class="left">
+            <ons-back-button> </ons-back-button>
+        </div>
+        <div class="center" style="text-align:center;">
+            <span style="font-size:14pt;font-weight:bold;">Notifications</span>
+        </div>
+        <div class="right" style="padding-top:2%">
+            <ons-toolbar-button>
+                <img src="assets/icon/bells.png" width="25px" height="25px"/>
+                <span class="notification" style="font-size: 8pt;margin-left:-25%">1</span>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    
+    <ons-card>
+        <ons-list ng-repeat="day in date">
+            <ons-list-header style="background-color:#d0dbf2;font-weight:bold;font-size:14pt" >{{day.date}}</ons-list-header>
+            <div ng-repeat="item in notif">
+            <ons-list-item ng-if="day.date==item.date" onClick="myNav.pushPage('notifications_detail.html', {animation: 'none'})">
+                <div ng-class="{'left': item.stat == 'read','left notif-no-read': item.stat !== 'read'}">
+                    {{item.subject}}
+                </div>
+                <div class="right">
+                    {{item.time}}
+                </div>
+            </ons-list-item>
+            </div>
+            <!--<ons-list-item>
+                <div class="left" style="font-weight:bold;color:#425BB4">
+                    Your get cashback
+                </div>
+                <div class="right">
+                    16:00
+                </div>
+            </ons-list-item>
+            <ons-list-item>
+                <div class="left">
+                    Your get cashback
+                </div>
+                <div class="right">
+                    16:00
+                </div>
+            </ons-list-item>-->
+        </ons-list>
+    </ons-card>
+</ons-page>

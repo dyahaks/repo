@@ -1,0 +1,79 @@
+<!--<ons-navigator var="flightNav">-->
+<ons-page ng-controller="travelingCtrl" ng-init="data_search_flight()">
+    <ons-toolbar>
+        <div class="left">
+            <ons-back-button> </ons-back-button>
+        </div>
+        <div class="center" style="text-align:center;">
+            <span style="font-size:14pt;font-weight:bold;"> <span ng-repeat="bandarafrom in bandara" ng-if="from == bandarafrom.kode">{{bandarafrom.kode}}</span> - <span ng-repeat="bandarato in bandara" ng-if="to == bandarato.kode">{{bandarato.kode}}</span></span><br>
+        </div>
+        <div class="right" style="padding-top:2%">
+            <ons-toolbar-button>
+                <img src="assets/icon/bells.png" width="25px" height="25px"/>
+                <span class="notification" style="font-size: 8pt;margin-left:-25%">1</span>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    <ons-list style="background-color:transparent;">
+        <ons-list-header style="background-color:transparent;font-size:15pt">Departing Flight</ons-list-header>
+        <ons-list-item style="width:94%; border-radius:5px 5px 0 0; margin:0 3% 0 3%;" id="list-white" tappable>
+            <div class="left">
+                <img class="list-item__icon" width="40" src="assets/icon/states_airlines.png">
+            </div>
+            <div align="left">
+                <span class="list-item__title">Sun, 14 Jan 2018</span><br>
+                <span class="list-item__subtitle">6:35 AM - 8:22 AM</span><br>
+                <span class="list-item__subtitle">Direct &#8226; 1h 47m &#8226; Economy</span><br>
+                <span class="list-item__subtitle">States Airlines</span><br>
+            </div>
+        </ons-list-item>
+        <ons-list-item style="width:94%; border-radius:0 0 5px 5px; margin:0 3% 0 3%;" id="list-white" tappable>
+            <div class="left">
+                <img class="list-item__icon" width="40" src="assets/icon/skyview_airlines.png">
+            </div>
+            <div align="left">
+                <span class="list-item__title">Tue, 05 Feb 2018</span><br>
+                <span class="list-item__subtitle">6:35 AM - 8:22 AM</span><br>
+                <span class="list-item__subtitle">Direct &#8226; 1h 47m &#8226; Economy</span><br>
+                <span class="list-item__subtitle">Skyview Airlines</span><br>
+            </div>
+        </ons-list-item>
+        <ons-list-header style="background-color:transparent;font-size:15pt">Policy</ons-list-header>
+        <ons-list-item style="width:94%; border-radius:5px 5px 0 0; margin:0 3% 0 3%;" id="list-white" tappable>
+            <div style="text-align:left;">
+                <span style="color:grey;">Non Refundable</span><br>
+                <span style="color:green;">Reschedule Available</span>
+            </div>
+        </ons-list-item>
+        <ons-list-header style="background-color:transparent;font-size:15pt">Travelers Details</ons-list-header>
+        <ons-list-item ng-if="adult != 0" ng-repeat="n in [] | range:adult" modifier="chevron" style="width:94%; border-radius:5px; margin:0 3% 3% 3%;" id="list-white" tappable ng-click="traveler(n, 'Adult')">
+            <div class="left">
+                <span ng-hide="count == n+1" class="list-item__title">Adult {{n + 1}}</span><br>
+                <span ng-show="count == n+1" class="list-item__title">{{fullNamePassenger}}</span><br>
+            </div>
+            <div class="right">
+                <span class="list-item__subtitle">Fill in Details</span>
+            </div>
+        </ons-list-item>
+        <ons-list-item ng-if="child != 0" ng-repeat="n in [] | range:child" modifier="chevron" style="width:94%; border-radius:5px; margin:0 3% 3% 3%;" id="list-white" tappable ng-click="traveler(n, 'Child')">
+            <div class="left">
+                <span class="list-item__title">Child {{n + 1}}</span><br>
+            </div>
+            <div class="right">
+                <span class="list-item__subtitle">Fill in Details</span>
+            </div>
+        </ons-list-item>
+        <ons-list-item ng-if="infant != 0" ng-repeat="n in [] | range:infant" modifier="chevron" style="width:94%; border-radius:5px; margin:0 3% 3% 3%;" id="list-white" tappable ng-click="traveler(n, 'Infant')">
+            <div class="left">
+                <span class="list-item__title">Infant {{n + 1}}</span><br>
+            </div>
+            <div class="right">
+                <span class="list-item__subtitle">Fill in Details</span>
+            </div>
+        </ons-list-item>
+    </ons-list>
+    <div style="margin: 5%">
+        <ons-button modifier="large" style="background-color: #1A429E; width: 100%;" ng-click="show('traveling_booking.html');">SUBMIT</ons-button>
+    </div>
+</ons-page>
+<!--</ons-navigator>-->

@@ -1,0 +1,40 @@
+<ons-page id="mypage" ng-controller="registerCtrl">
+    <ons-toolbar modifier="transparent">
+        <ons-back-button style="color:white;"> Back </ons-back-button>
+    </ons-toolbar>
+    <div class="padding primaryColor" style="margin: 0 auto; overflow: auto;">
+        <div style="margin-top: 5%; margin-bottom: 5%;">
+            <h1> Register </h1>
+        </div>
+        <div style="width: 100%; padding-bottom: 7%;">
+            <input type="text" id="name" placeholder="Name" class="darkBlue namaSignUp" />
+        </div>
+        <div style="width: 100%; padding-bottom: 7%;">
+            <input type="email" id="email" placeholder="Email" class="darkBlue" />
+        </div>
+        <div style="width: 100%;">
+            <input type="number" id="phoneNumber" placeholder="Phone Number" class="darkBlue" />
+        </div>
+        <div style="color: #ffffff; font-size: 10pt; padding: 7%; text-align: center;">
+            <span> By registering , I agree to the<span style="color:#4286f4"> Terms of service</span> and <span style="color:#4286f4">Privacy Policy </span></span>
+        </div>
+        <div>
+            <ons-button class="btnWhite" onClick="myNav.replacePage('smsVerification.html');" modifier="large">Register</ons-button>
+        </div>
+        <ons-row class="padding">
+            <div style="width: 45%; vertical-align: middle; margin-top: 2%;">
+                <hr style="border: 0.5px solid white;" />
+            </div>
+            <div style="width: 5%; font-size: 10pt; color: white; padding-left: 2%; padding-right: 2%;">
+                Or
+            </div>
+            <div style="width: 45%; margin-top: 2%;">
+                <hr style="border: 0.5px solid white;" />
+            </div>
+        </ons-row>
+        <div>
+            <ons-button class="btnFacebook" modifier="large"><img src="assets/icon/facebook.png" width="15" height="15" /> &nbsp;&nbsp; LOGIN WITH FACEBOOK </ons-button>
+        </div>
+    </div>
+    
+</ons-page>
